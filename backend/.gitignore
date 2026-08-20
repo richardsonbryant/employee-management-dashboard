@@ -1,0 +1,36 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Maven (kamu pakai Gradle, tapi jaga-jaga ada pom.xml juga)
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Spring Boot config with credentials
+src/main/resources/application.properties
+src/main/resources/application-*.properties
+src/main/resources/application.yml
+src/main/resources/application-*.yml
+bin/main/application.properties
+
+# IDE
+.idea/
+.classpath
+.project
+.settings/
+*.iml
+.vscode/
+
+# macOS
+.DS_Store
+__MACOSX/
+
+# Compiled class files
+bin/
+
+# Logs
+*.log
+logs/

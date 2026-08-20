@@ -1,0 +1,38 @@
+# Laravel specific
+/vendor/
+/node_modules/
+/public/hot
+/public/storage
+/storage/*.key
+/storage/app/public/attendance_photos/
+/.env
+/.env.backup
+/.env.production
+
+# Generated / cache
+/bootstrap/cache/*.php
+/framework/cache/data/
+/framework/sessions/
+/framework/views/
+/framework/testing/
+
+# Database
+/database/database.sqlite
+
+# Logs
+/storage/logs/
+
+# macOS
+.DS_Store
+__MACOSX/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Build artifacts
+/public/build/
+npm-debug.log
+yarn-error.log

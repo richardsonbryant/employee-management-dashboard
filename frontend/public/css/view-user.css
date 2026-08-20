@@ -1,0 +1,143 @@
+/* Root Variables */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --success-color: #2ecc71;
+    --warning-color: #f39c12;
+    --danger-color: #e74c3c;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --text-color: #333;
+    --muted-color: #6c757d;
+    --sidebar-width: 250px;
+    --sidebar-collapsed-width: 70px;
+    --header-height: 60px;
+    --transition-speed: 0.3s;
+}
+
+/* Global Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: #f5f7fa;
+    overflow-x: hidden;
+    padding-top: var(--header-height); /* Add padding to body to account for fixed navbar */
+}
+
+/* Navbar Styling */
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--secondary-color);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    z-index: 1030;
+    height: var(--header-height);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-right, .navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left {
+    padding-left: 10px;
+}
+
+.navbar-right {
+    padding-right: 15px;
+}
+
+.navbar-brand {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white !important;
+    text-decoration: none;
+}
+
+.navbar .dropdown-toggle::after {
+    vertical-align: middle;
+}
+
+/* Additional styling for tables and content */
+.table-content {
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.table-content th {
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: 500;
+}
+
+.clickable-row:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.back-button {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-name {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.more-text {
+    color: var(--primary-color);
+    font-style: italic;
+    cursor: pointer;
+}
+
+.reason-text {
+    cursor: pointer;
+}
+
+/* Pagination styling */
+.pagination {
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.pagination .page-link {
+    color: var(--secondary-color);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* Form controls styling */
+.form-select, .form-control {
+    border-color: #ced4da;
+    border-radius: 4px;
+}
+
+.form-select:focus, .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}

@@ -1,0 +1,170 @@
+:root {
+    --primary-color: #4f46e5;
+    --secondary-color: #1e293b;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --light-color: #f8fafc;
+    --dark-color: #0f172a;
+    --text-color: #334155;
+    --muted-color: #64748b;
+    --transition-speed: 0.3s;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-color);
+    background-color: #f1f5f9;
+  }
+  
+  .navbar {
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    height: 64px;
+  }
+  
+  .navbar-brand {
+    font-weight: 600;
+  }
+  
+  .card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin: 75px auto 0;
+  }
+  
+  .card-header {
+    background-color: white;
+    border-bottom: 1px solid #e5e7eb;
+    border-radius: 12px 12px 0 0 !important;
+    padding: 1.25rem 1.5rem;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .form-control {
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    padding: 0.75rem 1rem;
+    height: auto;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(79, 70, 229, 0.25);
+  }
+  
+  .input-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .input-group-text {
+    background-color: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 8px 0 0 8px;
+    width: 45px;
+    justify-content: center;
+  }
+  
+  .form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+  }
+  
+  .btn-action {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    padding: 0.625rem 1.25rem;
+  }
+  
+  .btn-approve {
+    background-color: var(--success-color);
+    color: white;
+    border: none;
+  }
+  
+  .btn-approve:hover {
+    background-color: #059669;
+    transform: translateY(-1px);
+  }
+  
+  .btn-reject {
+    background-color: #f3f4f6;
+    color: var(--danger-color);
+    border: 1px solid #d1d5db;
+  }
+  
+  .btn-reject:hover {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    transform: translateY(-1px);
+  }
+  
+  .btn-back {
+    display: inline-flex;
+    align-items: center;
+    color: var(--muted-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .btn-back:hover {
+    color: var(--text-color);
+  }
+  
+  .btn-back i {
+    margin-right: 0.5rem;
+  }
+  
+  .status-badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  
+  .status-badge.pending {
+    background-color: #fef3c7;
+    color: #92400e;
+  }
+  
+  .status-badge.approved {
+    background-color: #d1fae5;
+    color: #065f46;
+  }
+  
+  .status-badge.rejected {
+    background-color: #fee2e2;
+    color: #b91c1c;
+  }
+  
+  .user-info {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1.5rem;
+  }
+  
+  .leave-info {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .leave-reason {
+    margin-bottom: 1.5rem;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 1rem;
+  }

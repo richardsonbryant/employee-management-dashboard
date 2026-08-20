@@ -1,0 +1,99 @@
+erDiagram
+    USER ||--o{ USER_DATA : "has permission requests"
+    USER ||--o{ WFH_DATA : "has WFH requests"
+    USER ||--o{ USER_SICK_DATA : "has sick requests"
+    USER ||--o{ USER_ATTENDANCE : "has attendance records"
+    USER ||--o{ REIMBURSE : "has reimbursements"
+    BROADCAST ||--o{ BROADCAST_RESPONSE : "has responses"
+
+    USER {
+        Long id PK
+        String name
+        String email UK
+        String password
+        UserRole role "employee | admin"
+        int leaveQuota
+        LocalDateTime createdAt
+    }
+
+    USER_DATA {
+        Long id PK
+        String email FK
+        String newName
+        String startOffDate
+        String endOffDate
+        int totalOffDay
+        String reason
+        String approvalStatus
+        String requestType
+        LocalDateTime createdAt
+    }
+
+    WFH_DATA {
+        Long id PK
+        String email FK
+        String newName
+        String startOffDate
+        String endOffDate
+        int totalOffDay
+        String reason
+        String approvalStatus
+        String requestType
+        LocalDateTime createdAt
+    }
+
+    USER_SICK_DATA {
+        Long id PK
+        String email FK
+        String newName
+        String startOffDate
+        String endOffDate
+        int totalOffDay
+        String reason
+        String approvalStatus
+        boolean hasDoctorLetter
+        String permissionLetter
+        String requestType
+        LocalDateTime createdAt
+    }
+
+    USER_ATTENDANCE {
+        Long id PK
+        String email FK
+        String clockIn
+        String clockOut
+        Float totalHours
+        String verification
+    }
+
+    REIMBURSE {
+        Long id PK
+        String email FK
+        String newName
+        String reimburseType
+        String reimburseDate
+        BigDecimal totalReimburse
+        String description
+        String proofLetter
+        String paymentDate
+        String reimburseProof
+        String approvalStatus
+        LocalDateTime createdAt
+    }
+
+    BROADCAST {
+        Long id PK
+        LocalDate startOffDate
+        LocalDate endOffDate
+        int totalOffDay
+        String message
+        String createdAt
+    }
+
+    BROADCAST_RESPONSE {
+        Long id PK
+        Long broadcastId FK
+        Long userId FK
+        String response
+        String createdAt
+    }
